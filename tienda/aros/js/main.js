@@ -1,122 +1,126 @@
-let unidades = Number(producto("Ingrese la cantidad de unidades"));
-let color = producto("Ingrese el color: NARANA / VIOLETA");
-
-
-function vender (mensaje){
-    alert(mensaje)
-
-}
-vender(unidades + " aros en color " + color + ". Debes abonar $" + 3000*unidades)  
- */
-
-
-const catalogoaros = ["ARO1", "ARO2" , "ARO3"];
-const catalogodijes = ["DIJE1", "DIJE2"];
-const catalogo = [catalogoaros, catalogodijes];
-
-class productos {
-    constructor(nombre, color, precio, stock, disponible){
+class producto {
+    constructor(id, nombre, precio, stock, disponible){
+        this.id = id;
         this.nombre = nombre;
-        this.color = color;
         this.precio = precio;
         this.stock = stock;
         this.disponible = disponible;
     }
 }
 
-const producto1 = new productos ("ARO1", "Naranja", 2500, 5, true);
-const producto2 = new productos ("ARO2", "Violeta", 3000, 5, true);
-const producto3 = new productos ("ARO3", "Azul", 2000, 5, false);
-const producto4 = new productos ("DIJE1", "Azul", 2000, 5, true);
-const producto5 = new productos ("DIJE2", "Rosa", 2000, 5, true);
-console.log(catalogo);
+const prod1 = new producto (1,"ARO1", 2500, 5, true);
+const prod2 = new producto (2, "ARO2", 3000, 5, true);
+const prod3 = new producto (3, "ARO3", 2000, 5, false);
+const prod4 = new producto (1, "DIJE1", 2000, 5, true);
+const prod5 = new producto (2, "DIJE2", 2000, 5, true);
 
-catalogodijes.push(new productos("DIJE3", "NEGRO", "2500", 5, true));
-console.log(catalogo);
+const catalogoaros = [prod1, prod2, prod3];
+const catalogodijes = [prod4, prod5];
+
+console.log(catalogoaros);
+console.log(catalogodijes);
+
+const prod6 = catalogodijes.push(new producto(3, "DIJE3", "NEGRO", "2500", 5, true));
+console.log(catalogodijes);
+
+console.log(catalogodijes[2])
 
 let color
 let unidades
-let aronaranja
-let aroazul
-let arovioleta
+let prodElegido
+let aro1
+let aro2
+let aro3
 
-function elegir (){
+const elegirColor = () => { 
     color = prompt("Ingrese el color de aro: NARANJA / VIOLETA / AZUL");
 
-    if (color === "NARANJA"|| color === "Naranja"|| color === "naranja") {
-        aronaranja = true;
-        unidades = parseInt(prompt("Ok, cuantas unidades?"))
+    while (color === ""){
+        color = prompt("Ingrese el color de aro: NARANJA / VIOLETA / AZUL");  
     }
-    else if (color === "VIOLETA"||color === "Violeta"|| color === "violeta"){
+    
+    if (color === "NARANJA"|| color === "Naranja"|| color === "naranja"|| color === "VIOLETA"||color === "Violeta"|| color === "violeta"|| color === "AZUL"|| color === "Azul" || color === "azul"){ 
         unidades = parseInt(prompt("Ok, cuantas unidades?"))
-        arovioleta = true;}
-    else if (color === "AZUL"|| color === "Azul" || color === "azul"){
-        unidades = parseInt(prompt("Ok, cuantas unidades?"))
-        aroazul = true;}
+
+    }
     else {
         alert("No entiendo")
+        elegirColor();  
+    }  
+    }
+
+    
+
+    const vender =()=>{
+
+        if (aro1 === true){
+                if (prod1.disponible === true && prod1.stock >= unidades){
+                    alert("Debes abonar $" + unidades * prod1.precio)
+                } 
+                else { 
+                alert("Ups. Nos hay esa cantidad disponible.")
+                mostrarProductos()}
+        }
+        else if (aro2 === true){
+                    if (prod2.disponible === true && prod2.stock >= unidades){
+                    alert("Debes abonar $" + unidades * prod2.precio)
+                } 
+                else { 
+                alert("Ups. No hay esa cantidad disponible.")
+                mostrarProductos()}
+        }
+        else if (aro3 === true){
+    
+                if (prod3.disponible === true && prod3.stock >= unidades){
+                    alert("Debes abonar" + unidades * prod3.precio)            
+                } 
+                else { 
+                alert("Ups. No hay esa cantidad disponible.")
+                mostrarProductos()}
+    
+        }     
+        else {
+            console.log(Error);
+        }
+        }
+    
+
+
+
+const mostrarProductos = () => {
+    let lista = ""
+    catalogoaros.forEach(element=>{
+        lista += `${element.id}) ${element.nombre}\n`;}
+        )
+    console.log(lista)
+
+    prodElegido = prompt ("Ingrese el n° de producto\n" + lista);
+        
+    while (prodElegido ==="") {
+        prodElegido = prompt ("Ingrese el n° de producto\n" + lista);
+    }
+
+    if (prodElegido === "1"){
+        aro1 = true;
+        elegirColor()
+        vender()
+    }else if (prodElegido === "2"){
+        aro2 = true;
+        elegirColor()
+        vender()
+    }else if (prodElegido === "3"){
+        aro3 = true;
+        elegirColor()
+        vender()
     }
  
-            
-         /*    switch (color) {
-                case "NARANJA"||"Naranja" ||"naranja":
-                    let aronaranja = true;
-
-                    break;
-
-                    case "VIOLETA":
-                    let arovioleta = true;
-                    break;
-
-                case "AZUL":
-                    let aroazul = true;
-                    break;
-                } */
-
+    
+    else{
+        alert ("Ingrese un n° válido")
+        mostrarProductos()
+    }
      
-        return color;
-        return unidades;
-        return aronaranja;
-        return arovioleta;
-        return aroazul;
-    }
+}
 
-elegir()
-console.log(color)
-console.log(unidades);
+    mostrarProductos()
 
-console.log(aronaranja)
-console.log(arovioleta)
-console.log(aroazul)
-
-
-function vender(){
-    if (aronaranja === true){
-            if (producto1.disponible === true && producto1.stock >= unidades){
-                alert("Debes abonar $" + unidades * producto1.precio)
-            } 
-            else { 
-            alert("Ups. Nos hay esa cantidad disponible.")}
-    }
-    else if (arovioleta === true){
-                if (producto2.disponible === true && producto2.stock >= unidades){
-                alert("Debes abonar $" + unidades * producto2.precio)
-            } 
-            else { 
-            alert("Ups. No hay esa cantidad disponible.")}
-    }
-    else if (aroazul === true){
-
-            if (producto3.disponible === true && producto3.stock >= unidades){
-                alert("Debes abonar $" + unidades * producto3.precio)
-            } 
-            else { 
-            alert("Ups. No hay esa cantidad disponible.")}
-
-    }     
-    else {
-        console.log(Error);
-    }
-    }
-          
-vender()
