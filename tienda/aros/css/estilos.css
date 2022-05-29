@@ -1,12 +1,25 @@
 body {
 	background: black; 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    height: 600px;
+    height: 900px;
     width: 100%;
     display:table;
 
+}
+
+header{
+	height: 120px;
+	width: auto;
+
+}
+
+#logo{
+	float: left;
+
+}
+
+#imgCarrito{
+	float:right;
+	margin: 20px;
 }
 
 
@@ -21,7 +34,7 @@ body {
 
 .estrellas {
 	position: absolute;
-	height: 100%;
+	height: 1200px;
 	width: 100%;
 	background: transparent
         url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130891/stars.png) repeat
@@ -30,31 +43,40 @@ body {
 	animation: move-twink-back 200s linear infinite;
 }
 
-img{
-	width: 200px;
-	height: 200px;
-	object-fit: cover;
-}
+ 
 
-
-input{
-	display:block;
-}
-
-.ingreso1, .ingreso2{
-		width: 400px;
-		margin:auto;
-
-}
-
-.agregar {
-	margin:auto;
-}
-
-.listado{
+#caja{
 	margin:100px;
+	display:flex;
+	gap:30px;
 }
 
-h3, p, b{
+
+h3, b{
 	color: white;
+	display: block;
+	font-size: 11px;
+	font-weight: 600;
+	letter-spacing: .1rem;
+	text-transform: uppercase;
 }
+
+button{
+display: block;
+height: 38px;
+padding: 0 30px;
+margin-top: 10px;
+color: #555;
+text-align: center;
+font-size: 11px;
+font-weight: 600;
+line-height: 38px;
+letter-spacing: .1rem;
+text-transform: uppercase;
+text-decoration: none;
+white-space: nowrap;
+background-color: transparent;
+border-radius: 4px;
+border: 1px solid #bbb;
+cursor: pointer;
+box-sizing: border-box; }
