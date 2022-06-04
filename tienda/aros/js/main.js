@@ -1,8 +1,8 @@
 
 const catalogo = [
-    {id:1, img: "js/img/aro1.png", nombre:"Aro solitario turquesa", precio:2500, stock: 5, disponible: true},
-    {id:2, img:"js/img/aro2.png", nombre:"Aro solitario naranja", precio:3000, stock: 5, disponible: true},
-    {id:3, img:"js/img/aro3.png", nombre:"Aro solitario violeta", precio:2000, stock: 5, disponible: false},
+    {id:1, img: "/js/img/aro1.png", nombre:"Aro solitario turquesa", precio:2500, stock: 5, disponible: true},
+    {id:2, img:"/js/img/aro2.png", nombre:"Aro solitario naranja", precio:3000, stock: 5, disponible: true},
+    {id:3, img:"/js/img/aro3.png", nombre:"Aro solitario violeta", precio:2000, stock: 5, disponible: false},
 ]
 
 console.log(catalogo)
