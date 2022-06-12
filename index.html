@@ -5,54 +5,128 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/estilos.css" href="">
+    
+  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
     <title>Romilaria 🔥</title>
 </head>
 
 <body>
 
     <header>
-        <nav>
+    
+      <div id="logo">
+
+        <img class="imglogo" src="css/img/logo.png" alt=""></div>
+
+        <div id="imgCarrito">
+          <a href="#divCarrito"><img class="imgcarrito" src="css/img/carrito.png" alt=""></a>
+      </div>
+      
+              <nav>
             <ul id="menu">
-              <li><a href="">Tienda</a>
-                <ul>
-                  <li><a href="tienda/aros/index.html">Aros</a>
-                </li> 
-                  <li><a href="tienda/dijes/index.html">Dijes</a></li>
-                </ul>  
-              </li>
-              <li><a href="">Obra</a>
-                <ul>
-                    <li><a href="">Vidrio</a></li>
-                    <li><a href="">Cerámica</a></li>
-                </ul>  
-            </li>
-              <li><a href="">Contacto</a></li>
+              <li><a href="#tienda">Tienda</a></li>
+              <li><a href="#contacto">Contacto</a></li>
             </ul>
           </nav>
 
-
-
+  
+ 
+    
     </header>
     
     <main>      
-    <div class="estrellas"></div>
-
+    <section id="portada">  
+   
+    
         <h1>Romilaria</h1>
-        <hr />
-        <p></p>
+        <h2>Flama<h2>
+ 
+        <hr class="titulo"/>
+
+    </section>  
+
+
+    
+    <section id="tienda">
+            <div class="estrellas">
+
+            <div id="caja"></div>
+             
+
+            <h4>Carrito</h4>
+            <div id="divCarrito"></div>
+         
+            <h4>Finalizar compra</h4>
+            <div id="compra">
+
+                <ul id="listaCompra">
+                </ul> 
+                <div id="total">
+                  </div>
+
+                <button id="pagar">PAGAR</button>  
+               
+
+            </div>
+        
+      </div>
+      
+      
+        
+
+
+    </section>
+    
+
+    
+    <section id ="contacto">
+
+      <div id="ig"></div>
+          
+          <form id="form">             
+            <input type="hidden" name="contact_number">
+          <label>Nombre</label>
+          <input type="text" name="user_name" id="user_name" placeholder="Nombre">
+          <label>Email</label>
+          <input type="email" name="user_email" id="user_email" placeholder="Email">
+          <label>Mensaje</label>
+          <textarea name="message" id="message" placeholder="Mensaje"></textarea>
+          <button type="submit" id ="btnMensaje" value="Send Email">Enviar Mensaje</button>
+        </form>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <script type="text/javascript">emailjs.init('EXLEwDC2FcnNAHrEn')</script>
+    
+
+
+  </section>
     </main>
 
-    <section id="tienda">
-
-    </div>
 
 
 
+    <footer>
+      <p id="pie">Sitio web desarrolado por Marisol Rodríguez</p>
+    </footer>
 
+       
+ 
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 
-    <footer></footer>
+   
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 
-    <script src="js/main.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+  
+    <script type="text/javascript" src="js/form.js"></script>
+
+    <script type="text/javascript" src="js/main.js"></script>
+    
 
 </body>
 </html>
