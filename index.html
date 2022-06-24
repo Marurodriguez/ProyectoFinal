@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Romilaria 🔥</title>
     <link rel="stylesheet" type="text/css" href="css/estilos.css" href="">
-    
-  <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+ 
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 
-    <title>Romilaria 🔥</title>
+ 
 </head>
 
 <body>
@@ -50,29 +52,53 @@
 
     
     <section id="tienda">
+
             <div class="estrellas">
+
+
+
+            <div id="catalogo">
 
             <div id="caja"></div>
              
+            <div id="modal">
+              <p>Producto agregado!</p>
+            </div>
+         
+            </div>
 
+            <hr>
             <h4>Carrito</h4>
             <div id="divCarrito"></div>
-         
+
+            
+            <hr>
             <h4>Finalizar compra</h4>
+
             <div id="compra">
+
+                <div id="contenedorCompra">
 
                 <ul id="listaCompra">
                 </ul> 
-                <div id="total">
-                  </div>
 
-                <button id="pagar">PAGAR</button>  
-               
+                </div>
+                             
+
+                <div id="total">
+                  
+                  <div id="divTotal"></div>
+
+                </div>
+
+            <button id="pagar">IR A PAGAR</button>  
 
             </div>
         
       </div>
-      
+    
+    
+     
       
         
 
@@ -91,14 +117,14 @@
           <input type="text" name="user_name" id="user_name" placeholder="Nombre">
           <label>Email</label>
           <input type="email" name="user_email" id="user_email" placeholder="Email">
-          <label>Mensaje</label>
-          <textarea name="message" id="message" placeholder="Mensaje"></textarea>
-          <button type="submit" id ="btnMensaje" value="Send Email">Enviar Mensaje</button>
+          <label>Consulta</label>
+          <textarea name="message" id="message" placeholder="Consulta"></textarea>
+          <button type="submit" id ="btnMensaje" value="Send Email">Enviar</button>
         </form>
 
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-        <script type="text/javascript">emailjs.init('EXLEwDC2FcnNAHrEn')</script>
+        <script type="text/javascript"> emailjs.init('EXLEwDC2FcnNAHrEn') </script>
     
 
 
@@ -114,17 +140,19 @@
 
        
  
+   
+    <!-- SWEETALERT -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     
+    <!-- JQUERY -->
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"> </script>
 
-   
-    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
 
+    <!-- SLICK -->
     <script type="text/javascript" src="slick/slick.min.js"></script>
 
-  
+    <!-- MIS ARCHIVOS JS -->
     <script type="text/javascript" src="js/form.js"></script>
-
     <script type="text/javascript" src="js/main.js"></script>
     
 
