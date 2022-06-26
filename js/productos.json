@@ -1,0 +1,35 @@
+[
+    {
+        "id":1, 
+        "img1": "js/img/aro1.png", 
+        "img2": "js/img/aro1.png", 
+        "nombre":"Aro solitario turquesa", 
+        "nombrePlural": "Aros solitarios turquesa", 
+        "precio":2500, 
+        "stock": 5, 
+        "disponible": true
+    },
+
+    {
+        "id":2, 
+        "img1":"js/img/aro2.png", 
+        "img2": "js/img/aro2.png", 
+        "nombre":"Aro solitario naranja", 
+        "nombrePlural": "Aros solitarios naranja", 
+        "precio":3000, 
+        "stock": 5, 
+        "disponible": true
+    },
+
+    {
+        "id":3, 
+        "img1":"js/img/aro3.png", 
+        "img2": "js/img/aro3.png", 
+        "nombre":"Aro solitario violeta", 
+        "nombrePlural": "Aros solitarios violeta", 
+        "precio":2000, 
+        "precioDesc": 1800, 
+        "stock": 5, 
+        "disponible": true
+    }
+]
