@@ -1,3 +1,8 @@
+*{
+	margin:0;
+	scroll-behavior: smooth;
+}
+
 body {
 	background: black; 
     background-image: url("https://media.giphy.com/media/iJFOZmkOe7SoGzOmfu/giphy.gif");
@@ -20,8 +25,7 @@ header {
     width: 100%;
     z-index: 2000;
     height: 75px;
-    margin: 0;
-	
+    margin: 0;	
 }
 
 
@@ -93,7 +97,7 @@ li a:hover {
 .estrellas {
 	position: absolute;
 	width: 100%;
-	height: 1000px;
+	height: 1200px;
 	background: transparent
         url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/130891/stars.png) repeat
 		top center;
@@ -120,7 +124,7 @@ h2{
 	font-size: 20px;
 	line-height: 30px;
 	font-weight: 300;
-
+	padding-top: 20px;
 }
 
 .titulo {
@@ -136,9 +140,9 @@ p{
 	text-transform: uppercase;
 	font-family: "futura-pt", serif;
 	font-weight: 30;
-	font-size: 10px;
+	font-size: 15px;
 	line-height: 20px;
-	padding:20px;
+	padding:15px;
 
 }
 
@@ -146,16 +150,22 @@ p{
 
 #tienda{
 	width: 100%;
-	height: 1300px;
+	height: 1200px;
 	background-color: black;
 }
 
-
 #caja{
-	margin:50px 100px;
-	width: 200px;
-	height: 600px;
+	margin:50px 10px;
+	width: 800px;
+    height: 250px;
 	gap:30px;
+}
+
+#cajaProducto{
+ 	float: left;
+	width: 200px;
+	margin: 30px;
+
 }
 
 h3, h4, b, li{
@@ -192,13 +202,27 @@ cursor: pointer;
 box-sizing: border-box;
 cursor:pointer; }
 
-#pagar{
-	margin:auto;
+
+#modal{
+	display:none;
+	background-color: grey;
+	text-align: center;
+	width: 250px;
+	height: 60px;
+	opacity: 50%;
+	text-align: center;
+	border-radius: 5px;
+	box-shadow: #000;
+	z-index: 1;
+	position:fixed;
+	bottom:30px;
+	right:30px;
 }
 
 .cajaCarrito{
 	margin-left: 100px;
 	margin-top: 20px;
+	
 }
 
 #compra{
@@ -216,13 +240,28 @@ cursor:pointer; }
 	list-style: none;
 }
 
+#contenedorCompra{
+	margin: 10px 100px;
+	display:inline;
+}
+
+
 
 #listaCompra{
 	float:left;
+	margin: 10px;
+}
+
+#divTotal{
+	margin:auto;
+}
+
+#pagar{
+	margin: 20px auto;
 }
 
 #contacto{
-    height:700px;
+    height:500px;
 
 }
 
@@ -233,7 +272,7 @@ form{
 	border-radius:10px;
 	float:right;
 	margin-right: 100px;
-	margin-top: 150px;
+	margin-top: 100px;
 	background-color:grey;
 	opacity: 80%;
 }
@@ -275,4 +314,13 @@ textarea{
 	display:block;
 	
 	font-family: "futura-pt", serif;
+}
+
+footer {
+    background-color: #000;
+	opacity: 70%;
+    display: block;
+    width: 100%;
+    height: 75px;
+    margin: 0;	
 }
