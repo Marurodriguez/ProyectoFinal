@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Romilaria 🔥</title>
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" href="">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+ 
+</head>
+
+<body>
+
+    <header>
+    
+      <div id="logo">
+
+        <img class="imglogo" src="css/img/logo.png" alt=""></div>
+
+        <div id="imgCarrito">
+          <a href="#divCarrito"><img class="imgcarrito" src="css/img/carrito.png" alt=""></a>
+      </div>
+      
+              <nav>
+            <ul id="menu">
+              <li><a href="#tienda">Tienda</a></li>
+              <li><a href="#contacto">Contacto</a></li>
+            </ul>
+          </nav>
+
+  
+ 
+    
+    </header>
+    
+    <main>      
+    <section id="portada">  
+   
+    
+        <h1>Romilaria</h1>
+        <h2>Flama<h2>
+ 
+        <hr class="titulo"/>
+
+    </section>  
+
+
+    
+    <section id="tienda">
+
+            <div class="estrellas">
+
+
+
+            <div id="catalogo">
+
+            <div id="caja"></div>
+             
+            <div id="modalCarrito">
+              <p>Producto agregado!</p>
+            </div>
+         
+            </div>
+
+            <hr>
+            <h4>Carrito</h4>
+            <div id="divCarrito"></div>
+
+            
+            <hr>
+            <h4>Finalizar compra</h4>
+
+            <div id="compra">
+
+                <div id="contenedorCompra">
+
+                <ul id="listaCompra">
+                </ul> 
+
+                </div>
+                             
+
+                <div id="total">
+                  
+                  <div id="divTotal"></div>
+
+                </div>
+
+            <button id="pagar">FINALIZAR COMPRA</button>
+          </div>
+                     
+            <div id="modalPago">
+            <div id="modalContainer">
+            
+            <h5>¿Cómo querés pagar?</h5>
+
+            <input class="pago" id="transf" type="radio" name="pago" value="1"><h6>Transferencia Bancaria</h6><br>
+
+            <input class="pago" id="mp" type="radio" name="pago" value="2"><h6>Tarjeta de débito / crédito</h6><br>
+           
+              <div id="botones">
+            <button class="pago" id="confirm">CONFIRMAR</button>
+            <button class="pago" id="cerrar">Volver atrás</button>
+          </div>
+
+
+
+
+          <!--  <form id="form">   
+          <label>Nombre</label>
+          <input type="text" name="user_name" id="user_name" placeholder="Nombre">
+          <label>Email</label>
+          <input type="email" name="user_email" id="user_email" placeholder="Email">
+          <button type="submit" id ="btnMensaje" value="Send Email">Enviar</button> 
+        </form>-->
+
+            </div>
+        
+      </div>
+    
+    
+     
+      
+        
+
+
+    </section>
+    
+
+    
+    <section id ="contacto">
+
+      <div id="ig"></div>
+          
+          <form id="form">             
+            <input type="hidden" name="contact_number">
+          <label>Nombre</label>
+          <input type="text" name="user_name" id="user_name" placeholder="Nombre">
+          <label>Email</label>
+          <input type="email" name="user_email" id="user_email" placeholder="Email">
+          <label>Consulta</label>
+          <textarea name="message" id="message" placeholder="Consulta"></textarea>
+          <button type="submit" id ="btnMensaje" value="Send Email">Enviar</button>
+        </form>
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+        <script type="text/javascript"> emailjs.init('EXLEwDC2FcnNAHrEn') </script>
+    
+
+
+  </section>
+    </main>
+
+
+
+
+    <footer>
+      <p id="pie">Sitio web desarrolado por Marisol Rodríguez</p>
+    </footer>
+
+     <!-- SWEETALERT -->
+     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <!-- JQUERY -->
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"> </script>
+
+
+    <!-- SLICK -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <!-- MIS ARCHIVOS JS -->
+    <script type="text/javascript" src="js/form.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
+
+</body>
+</html>
